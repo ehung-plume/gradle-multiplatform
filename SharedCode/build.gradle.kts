@@ -37,7 +37,7 @@ val packForXcode by tasks.creating(Sync::class) {
     /// selecting the right configuration for the iOS
     /// framework depending on the environment
     /// variables set by Xcode build
-    val mode = System.getenv("CONFIGURATION") ?: "DEBUG"
+    val mode = System.getenv("CONFIGURATION") ?: "DEBUG Business"
     val framework = kotlin.targets
         .getByName<KotlinNativeTarget>("ios")
         .binaries.getFramework(mode)
